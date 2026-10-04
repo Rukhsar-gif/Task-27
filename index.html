@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="A configurable Pomodoro timer with work and break sessions."
+    >
+
+    <meta
+        name="author"
+        content="Rukhsar Hussain"
+    >
+
+    <title>Pomodoro Timer </title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="page">
+
+        <section
+            class="pomodoro-container"
+            aria-labelledby="pageTitle"
+        >
+
+            <header class="header">
+
+                <h1 id="pageTitle">
+                    Pomodoro Timer
+                </h1>
+
+                <p class="description">
+                    Focus deeply, take regular breaks, and keep track
+                    of completed work sessions.
+                </p>
+
+            </header>
+
+
+            <section class="timer-card">
+
+                <div class="session-header">
+
+                    <span
+                        class="session-badge work"
+                        id="sessionBadge"
+                    >
+                        WORK
+                    </span>
+
+                    <span
+                        class="session-status"
+                        id="sessionStatus"
+                    >
+                        Ready to focus
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="timer"
+                    id="timer"
+                    aria-live="polite"
+                >
+                    25:00
+                </div>
+
+
+                <div class="progress-container">
+
+                    <div
+                        class="progress-bar"
+                        id="progressBar"
+                    ></div>
+
+                </div>
+
+
+                <div class="controls">
+
+                    <button
+                        type="button"
+                        class="primary-button"
+                        id="startButton"
+                    >
+                        Start
+                    </button>
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        id="pauseButton"
+                        disabled
+                    >
+                        Pause
+                    </button>
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        id="resetButton"
+                    >
+                        Reset
+                    </button>
+
+                </div>
+
+
+                <div class="sessions">
+
+                    <span>
+                        Completed Sessions
+                    </span>
+
+                    <strong id="sessionCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+            <section class="settings-card">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="eyebrow">
+                            TIMER SETTINGS
+                        </p>
+
+                        <h2>
+                            Customize your sessions
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="settings-grid">
+
+                    <div class="setting-group">
+
+                        <label for="workDuration">
+                            Work Duration
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <input
+                                type="number"
+                                id="workDuration"
+                                min="1"
+                                max="120"
+                                value="25"
+                            >
+
+                            <span>
+                                min
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-group">
+
+                        <label for="breakDuration">
+                            Break Duration
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <input
+                                type="number"
+                                id="breakDuration"
+                                min="1"
+                                max="60"
+                                value="5"
+                            >
+
+                            <span>
+                                min
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="save-settings-button"
+                    id="saveSettingsButton"
+                >
+                    Save Settings
+                </button>
+
+
+                <p
+                    class="settings-message"
+                    id="settingsMessage"
+                    aria-live="polite"
+                ></p>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
